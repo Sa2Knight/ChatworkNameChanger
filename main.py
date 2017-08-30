@@ -40,7 +40,6 @@ driver.find_element_by_id('_profileInputName').send_keys(sys.argv[1])
 
 # 保存
 driver.find_element_by_css_selector("div[aria-label='保存する']").click()
-driver.save_screensuhot('/vagrant/hoge.png')
 
 # 後処理
 driver.close()
