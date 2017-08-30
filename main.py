@@ -28,11 +28,11 @@ wait.until(expected_conditions.visibility_of_element_located((By.ID, "_myStatusN
 
 # プロフィールを編集画面を表示
 driver.find_element_by_css_selector('#_myStatusName').click()
-time.sleep(1)
+time.sleep(0.5)
 driver.find_element_by_css_selector('#_myProfile .myAccountMenu__anchor').click()
-time.sleep(1)
+time.sleep(0.5)
 driver.find_element_by_css_selector('#_profileContent ._profileEdit').click()
-time.sleep(1)
+time.sleep(0.5)
 
 # 表示名を書き換える
 driver.find_element_by_id('_profileInputName').clear()
@@ -40,7 +40,7 @@ driver.find_element_by_id('_profileInputName').send_keys(sys.argv[1])
 
 # 保存
 driver.find_element_by_css_selector("div[aria-label='保存する']").click()
-driver.save_screenshot('/vagrant/hoge.png')
+driver.save_screensuhot('/vagrant/hoge.png')
 
 # 後処理
 driver.close()
